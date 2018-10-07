@@ -1,5 +1,8 @@
 import unittest
 
+import sys
+sys.path.append('../')
+
 from buzz import generator
 
 def test_sample_single_word():
