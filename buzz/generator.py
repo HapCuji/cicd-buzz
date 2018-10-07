@@ -1,5 +1,8 @@
 import random
 
+import sys
+sys.path.append('../')
+
 buzz = ('continuous testing', 'continuous integration',
     'continuous deployment', 'continuous ', 'devops')
 adjectives = ('complete', 'modern', 'self-service', 'integrated', 'end-to-end')

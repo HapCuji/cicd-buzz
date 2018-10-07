@@ -1,5 +1,8 @@
 import unittest
 
+import sys
+sys.path.append('../')
+
 from buzz.generator import *
 #sample, generate_buzz
 
