@@ -4,8 +4,7 @@ import sys
 sys.path.append('../')
 sys.path.insert(0, 'C:/Users/Ryzen/Documents/[my_learning]/main_reposit/cicd-buzz/buzz')
 
-#from buzz.generator
-import generator
+from buzz import generator
 #sample, generate_buzz
 
 def test_sample_single_word():
