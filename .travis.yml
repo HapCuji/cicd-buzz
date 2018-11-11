@@ -1,7 +1,34 @@
-language: python  
+language: python
 
-install: pip install 
-#install: python setup.py install 
-script:   
-    - python -m pytest -v
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  # PyPy versions
+  - "pypy3.5"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install .
+  
+# command to run tests
+script: pytest
 
+# env:
+    # - DJANGO=1.11.2
+
+# install:
+    # - pip install -q django==$DJANGO
+
+# install: pip install 
+# #install: python setup.py install 
+
+# script:
+    # - python setup.py test
+    # - cd ..
+
+# deploy:
+    # github_token: $GITHUB_TOKEN
+    # local_dir: cicd-buzz
+    
