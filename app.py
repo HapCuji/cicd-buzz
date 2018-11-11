@@ -1,7 +1,13 @@
 import os
 import signal
+
+import sys, os
+myPath = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, myPath + '/buzz')
+
 from flask import Flask
-from buzz import generator
+#from buzz import generator
+import generator
 
 app = Flask(__name__)
 

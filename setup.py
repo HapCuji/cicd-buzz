@@ -1,17 +1,34 @@
-#from setuptools import setup, find_packages
-from distutils.core import setup
+# #from setuptools import setup, find_packages
+# from distutils.core import setup
+
+# setup(
+		# name='Distutils',
+		# version='1.0',
+		# description='Python Distribution Utilities',
+		# author='Greg Ward',
+		# author_email='gward@python.net',
+		# url='https://www.python.org/sigs/distutils-sig/',
+		# packages=['distutils', 'distutils.command'],
+     # )
+	 
+from setuptools import setup
 
 setup(
-		name='Distutils',
-		version='1.0',
-		description='Python Distribution Utilities',
-		author='Greg Ward',
-		author_email='gward@python.net',
-		url='https://www.python.org/sigs/distutils-sig/',
-		packages=['distutils', 'distutils.command'],
-     )
-	 
+    name="cicd-buzz",
+    packages = ['cicd-buzz']
 
+    # the following makes a plugin available to pytest
+    entry_points = {
+        'pytest11': [
+            'name_of_plugin = cicd-buzz.app',
+        ]
+    },
+
+    # custom PyPI classifier for pytest plugins
+    classifiers=[
+        "Framework :: Pytest",
+    ],
+)
 # import os #import path
 # import sys  
 

@@ -1,11 +1,12 @@
 import unittest
 
 import sys
-sys.path.append('../')
-sys.path.insert(0, 'C:/Users/Ryzen/Documents/[my_learning]/main_reposit/cicd-buzz/buzz')
+# sys.path.append('../')
+sys.path.insert(0, './buzz')
 
-from buzz import generator
+#from buzz import generator
 #sample, generate_buzz
+import generator 
 
 def test_sample_single_word():
     l = ('foo', 'bar', 'foobar')
