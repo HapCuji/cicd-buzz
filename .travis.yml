@@ -10,15 +10,13 @@ python:
  # - "3.4"
  # - "3.5"
  # - "3.6"
-  # PyPy versions
+  PyPy versions
   - "pypy3.5"
 # command to install dependencies
 
 install:
   - pip install -r requirements.txt
- 
- sudo: required
-
+  
 script:
   - python -m pytest -v
 
