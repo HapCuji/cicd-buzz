@@ -1,3 +1,4 @@
+sudo: required
 
 services:
   - docker
@@ -12,17 +13,15 @@ python:
   # PyPy versions
   - "pypy3.5"
 # command to install dependencies
+
 install:
   - pip install -r requirements.txt
  
- 
  sudo: required
-
-language: python
 
 script:
   - python -m pytest -v
 
 after_success:
   - sh .travis/deploy_dockerhub.sh
-    
+  #- test "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" && sh .travis/deploy_heroku.sh
