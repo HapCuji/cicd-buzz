@@ -22,4 +22,5 @@ script:
 
 after_success:
   - sh .travis/deploy_dockerhub.sh
-  - test "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" && sh .travis/deploy_heroku.sh
+  - test "$TRAVIS_BRANCH" = "learning_to_3" &&  sh .travis/deploy_heroku.sh 
+  # && "$TRAVIS_PULL_REQUEST" = "false"
